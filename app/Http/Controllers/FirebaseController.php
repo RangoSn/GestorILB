@@ -18,17 +18,8 @@ class FirebaseController extends Controller
         ->create();
 
         $database   =   $firebase->getDatabase();
-        $createPost    =   $database
-        ->getReference('blog/posts')
-        ->push([
-            'title' =>  'Laravel 6',
-            'body'  =>  'This is really a cool database that is managed in real time.'
-
-        ]);
-            
-        echo '<pre>';
-        print_r($createPost->getvalue());
-        echo '</pre>';
+        $auth = $firebase->getAuth();
+        $user = $auth->createUserWithEmailAndPassword('snoopydogg375@gmail.com','123455L');
     } 
     
 }
