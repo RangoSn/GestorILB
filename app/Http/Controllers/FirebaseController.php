@@ -19,7 +19,7 @@ class FirebaseController extends Controller
 
         $database   =   $firebase->getDatabase();
         $auth = $firebase->getAuth();
-        $user = $auth->createUserWithEmailAndPassword('snoopydogg375@gmail.com','123455L');
+        $user = $auth->createUserWithEmailAndPassword('jay5@gmail.com','123455L');
     } 
     
 }
